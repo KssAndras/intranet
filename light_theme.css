@@ -1,0 +1,265 @@
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    color: #2c3e50;
+}
+
+nav {
+    background: #2c3e50;
+    height: 100px;
+    width: 100%;
+    position: fixed;
+    transition: height 0.5s ease;
+}
+
+.navbar {
+    transition: background-color 0.5s ease, height 0.5s ease;
+}
+
+.navbar-transparent {
+    background-color: transparent;
+}
+
+.navbar-shrink {
+    height: 60px; /* Set the height for the shrunk navbar */
+}
+
+.logo {
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 10px;
+    transition: margin-top 0.5s ease, margin-left 0.5s ease, font-size 0.5s ease;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    transition: font-size 0.3s ease;
+}
+
+a.active,
+a:hover {
+    background: #1b9bff;
+    transition: 0.5s;
+}
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check {
+    display: none;
+    left: 0;
+}
+
+.welcome {
+    background-image: url(Kepek/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    padding-top: 400px;
+}
+
+@media only screen and (max-device-width: 1366px) {
+    .parallax {
+        background-attachment: scroll;
+    }
+}
+
+@media (max-width: 952px) {
+    label.logo {
+        font-size: 30px;
+        padding-left: 50px;
+    }
+    nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .checkbtn {
+        display: block;
+        margin-right: 10px;
+    }
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+        line-height: 30px;
+    }
+    nav ul li a {
+        font-size: 20px;
+    }
+    a:hover,
+    a.active {
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+
+nav.shrink {
+    height: 60px;
+}
+
+nav.shrink .logo {
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+nav.shrink ul li a {
+    line-height: 60px;
+}
+
+nav.shrink .checkbtn {
+    line-height: 60px;
+}
+
+.rj {
+    width: 35px;
+}
+
+nav ul li.close-icon {
+    display: none;
+}
+
+nav #check:checked ~ ul li.close-icon {
+    display: block;
+    float: right;
+    margin-right: 20px;
+    line-height: 5px;
+}
+
+nav #check:checked ~ ul li.close-icon i {
+    color: white;
+    font-size: 30px;
+}
+
+nav ul li.close-icon {
+    position: absolute;
+    top: 0;
+    right: 20px;
+}
+
+nav ul li.close-icon i {
+    color: white;
+    font-size: 20px;
+}
+
+/* Adjustments for iPhone 6 */
+@media only screen and (max-device-width: 375px) {
+    .logo {
+        width: 300px; /* Logo méretének állítása */
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    .welcome h1 {
+        font-size: 2rem;
+    }
+
+    .checkbtn {
+        margin-right: 5px;
+    }
+}
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    margin: 5px 0;
+}
+.news {
+    background-color: #fff;
+    padding-top: 100px;
+    padding: 80px;
+}
+.news img {
+    width: 375px;
+    float: left;
+    padding: 0px 5px 5px;
+    margin-right: 30px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px gray;
+}
+
+.news h1 {
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    font-variant: small-caps;
+    text-shadow: 1px 1px white;
+    padding-bottom: 50px;
+}
+
+.news p {
+    margin-left: 20px;
+    text-align: justify;
+    letter-spacing: -0.1px;
+    line-height: 150%;
+}
+.graf {
+    width: 375px;
+    float: right;
+    padding: 0px 5px 5px;
+    margin-left: 20px;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 10px 10px 10px gray;
+}
